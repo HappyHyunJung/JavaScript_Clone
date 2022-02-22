@@ -57,11 +57,135 @@
 // plus(60, 8);
 // divide(98, 20);
 
-player = {
-    name: "최현정",
-    sayHello: function(otherPersonName) {
-        console.log("안녕하십니까? " + otherPersonName);
-    },
+// player = {
+//     name: "최현정",
+//     sayHello: function(otherPersonName) {
+//         console.log("안녕하십니까? " + otherPersonName);
+//     },
+// }
+// console.log(player.name);
+// player.sayHello("Lee");
+// // 계산기 구현
+// calculate = {
+//     add:function(a, b) {
+//         return(a + b);
+//     },
+//     minus:function(a, b) {
+//         return(a - b);
+//     },
+//     divide:function(a, b) {
+//         return(a / b);
+//     },
+//     multiple:function(a, b) {
+//         return(a * b);
+//     },
+//     power:function(a, b) {
+//         return(a ** b);
+//     }
+// }
+// 각 함수의 반환값이 다른 함수에 영향을 줌 - 변수 간 의존적
+// const plusResult = calculate.add(2, 3);
+// const minusResult = calculate.minus(plusResult, 10);
+// const timeResult = calculate.multiple(10, minusResult);
+// const divideResult = calculate.divide(timeResult, plusResult);
+// const powerResult = calculate.power(divideResult, minusResult);
+
+// calculate.add(1, 100);
+// calculate.power(2, 3);
+// calculate.divide(10, 2);
+
+// 한국 나이 계산
+// const age = 96;
+// function calculateKrAge(ageOfForeigner) {
+//     return ageOfForeigner + 2;
+// }
+
+// const krAge = calculateKrAge(age);
+
+// console.log(krAge);
+
+// const age = parseInt(prompt("How old are you?"));
+
+// if (isNaN(age)) {
+//     console.log("Please write a number");
+// } else if (age < 18){
+//     console.log("You are too young");
+// } else if (age >= 18 && age <= 50) {
+//     console.log("You can drink");
+// } else {
+//     console.log("You can't drink");
+// }
+
+// innerText - 내용 변경
+// const title =document.getElementById('title');
+
+// change innertext by Id
+// title.innerText = "Got you!!!"
+
+//아이디 불러오기
+//클래스네임 불러오기
+// console.log(title.id);
+// console.log(title.className);
+
+// change something by className
+// const hellos = document.getElementsByClassName("hello");
+// console.log(hellos);
+
+// const title = document.getElementsByTagName("h1");
+// console.log(title)
+
+// const title = document.querySelector(".hello h1");
+
+// function handleTitleClick() {
+//     title.style.color = "blue";
+// }
+// title.addEventListener("click", handleTitleClick);
+
+// video 3.4
+const title = document.querySelector(".hello h1");
+console.dir(title);
+
+function handleMouseEnter() {
+    title.innerText = "mouse is here";
 }
-console.log(player.name);
-player.sayHello("Lee");
+
+function handleMouseLeave() {
+    title.innerText = "Mouse is gone!";
+}
+// title.addEventListener("mouseenter", handleMouseEnter);
+// title.addEventListener("mouseleave", handleMouseLeave);
+
+//video 3.5
+
+// function handleTitleClick() {
+//     title.style.color = "blue";
+// }
+
+// function handleWindowResize() {
+//     document.body.style.backgroundColor = "tomato";
+// }
+
+// function handleWindowCopy() {
+//     alert("copier!");
+// }
+// // offline 시키기 - console 옆에 network 클릭
+// // 바래 아래 'Fast 3G 아래방향화살표' 클릭 - offline
+// function handleWindowOffline() {
+//     alert("SOS no WIFI");
+// }
+
+// function handleWindowOnline() {
+//     alert("All Goood!!!")
+// }
+// title.onclick = handleTitleClick;
+// title.onmouseenter = handleMouseEnter;
+// title.onmouseleave = handleMouseLeave;
+
+// // window 창 크기 사이즈 바꾸면 event 감지
+// window.addEventListener("resize", handleWindowResize);
+// // window 에서 ctrl + c
+// window.addEventListener("copy", handleWindowCopy);
+// // 브라우저 wifi offline - console 옆 network - 아래화살표
+// window.addEventListener("offline", handleWindowOffline);
+// // 브라우저 wifi online 상태가 되면 event 감지
+// window.addEventListener("online", handleWindowOnline);
