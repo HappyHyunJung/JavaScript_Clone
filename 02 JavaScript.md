@@ -39,3 +39,10 @@ object
 
 함수 function
   - 함수로 변수를 넘겨주고 더하기 나누기 기능 수행
+
+조건문 - 2.13
+prompt("message") - 브라우저에 message 를 보여주고 사용자에게 입력값을 받음
+변수의 데이터 타입 확인 - typeof 변수명
+변수 타입 변경 - parseInt("string") : string을 number로 변경.
+isNaN("**") - **가 스트링이면 is Not a Number - True
+- **가 15 숫자라면 not a number가 아니니까 - False
