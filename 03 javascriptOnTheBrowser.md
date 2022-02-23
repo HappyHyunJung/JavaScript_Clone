@@ -52,4 +52,28 @@ window.addEventListener("online", handleWindowOnline);
 // event reaction
 function 함수() {}
 
+// video 3.7
+// 색깔이 파랑이면 빨강으로 변환하고 -> 일치 여부 "==="
+// 색깔이 파랑이 아니면 파랑으로 변환
 
+// (1) element를 찾아라
+// (2) eventListner 사용해서 이벤트 감지
+// (3) 이벤트에 반응하게 만들어라
+
+// video 3.8
+// css 파일의 클래스를 javascript에 가져오기
+
+// 클릭했을 때, className === active 이면 className 없에고
+// 클릭했을 때, className 이 없으면 className = active 저장
+
+// video 3.9
+//classList
+-> if (title.classList.contains(clickedClass))
+ classList가 clickedClass를 포함하고 있으면
+-> clickedClass 제거
+-> classList가 clickedClass를 포함하지 않으면
+-> clickedClass 추가
+
+// title.classList.toggle("clicked") 
+-> toggle() 하나만으로 'clicked' classname이 있는지 확인하고 있으면 "clicked" 제거 / 'clicked'가 없으면 "clicked" 추가
+  
