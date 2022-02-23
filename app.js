@@ -142,16 +142,16 @@
 // title.addEventListener("click", handleTitleClick);
 
 // video 3.4
-const title = document.querySelector(".hello h1");
-console.dir(title);
+// const title = document.querySelector(".hello h1");
+// console.dir(title);
 
-function handleMouseEnter() {
-    title.innerText = "mouse is here";
-}
+// function handleMouseEnter() {
+//     title.innerText = "mouse is here";
+// }
 
-function handleMouseLeave() {
-    title.innerText = "Mouse is gone!";
-}
+// function handleMouseLeave() {
+//     title.innerText = "Mouse is gone!";
+// }
 // title.addEventListener("mouseenter", handleMouseEnter);
 // title.addEventListener("mouseleave", handleMouseLeave);
 
@@ -189,3 +189,56 @@ function handleMouseLeave() {
 // window.addEventListener("offline", handleWindowOffline);
 // // 브라우저 wifi online 상태가 되면 event 감지
 // window.addEventListener("online", handleWindowOnline);
+
+// video 3.7
+// (1) element를 찾아라
+//const title = document.querySelector(".hello h1");
+
+// 색깔이 파랑이면 빨강으로 변환하고
+// 색깔이 파랑이 아니면 파랑으로 변환
+// (3) 이벤트에 반응하게 만들어라
+// function handleTitleClick() {
+//     const currentColor = title.style.color;
+
+    // 색깔을 바꿀 때마다 title.style.color 번거로움
+    // 갱신할 수 있는 새 변수 생성
+//     let newColor;
+//     if (currentColor === "blue") {
+//         newColor = "tomato";
+//     } else {
+//         newColor = "blue";
+//     }
+//     title.style.color = newColor;
+// }
+
+// (2) eventListner 사용해서 이벤트 감지
+//title.addEventListener("click", handleTitleClick);
+
+// video 3.8
+// css 파일의 클래스를 javascript에 가져오기
+// video 3.9
+// classList
+// const title = document.querySelector(".hello h1");
+
+// 클릭했을 때, className === active 이면 className 없에고
+// 클릭했을 때, className 이 없으면 className = active 저장
+// function handleTitleClick() {
+//     const clickedClass = "clicked";
+//     if (title.classList.contains(clickedClass)) {
+//         title.classList.remove(clickedClass)
+//     } else {
+//         title.classList.add(clickedClass)
+//     }
+// }
+
+// title.addEventListener("click", handleTitleClick);
+
+// video 3.9
+// classList.toggle()
+const title = document.querySelector(".hello h1");
+
+function handleTitleClick() {
+    title.classList.toggle("clicked")    
+}
+
+title.addEventListener("click", handleTitleClick);
