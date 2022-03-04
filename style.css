@@ -1,4 +1,4 @@
-body{
+/* body{
     background-color: beige;
 }
 
@@ -8,4 +8,9 @@ h1 {
 
 .clicked {
     color: tomato;
+} */
+
+/* // css에 .hidden 클래스 이름을 만들고 display:none */
+.hidden {
+    display: none;
 }
