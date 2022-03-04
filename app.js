@@ -235,10 +235,85 @@
 
 // video 3.9
 // classList.toggle()
-const title = document.querySelector(".hello h1");
+// const title = document.querySelector(".hello h1");
 
-function handleTitleClick() {
-    title.classList.toggle("clicked")    
+// function handleTitleClick() {
+//     title.classList.toggle("clicked")    
+// }
+
+// title.addEventListener("click", handleTitleClick);
+
+//4.0
+const loginForm = document.querySelector(".login-form");
+// html에 있는 login-form  input, button 태그를 가져옴
+const loginInput = loginForm.querySelector("input");
+const loginButton = loginForm.querySelector("button");
+// 4.3
+const link = document.querySelector("a");
+// 4.4 아이디 greeting 찾기
+const greeting = document.querySelector("#greeting");
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+
+// 버튼을 클릭하면 클릭을 감지
+function onLoginBtnClick() {
+    // 4.1 변수를 만들어 입락한 내용 저장
+    // 저장된 내용으로 유효성 검사
+    const username = loginInput.value;
+    // 내용이 없다면
+    // if (username === "") {
+    //     alert("Please write your name");
+    // } 
+    // username 길이가 15자보다 크면
+    // else if (username.length > 15) {
+    //     alert("Your name is too long.");
+    // }
+    //console.log(username);
 }
 
-title.addEventListener("click", handleTitleClick);
+// loginButton.addEventListener("click", onLoginBtnClick);
+
+// button을 눌렀을 때 자동으로 페이지가 새로고침이 되지 않게 하기
+// submit 되지 않게 하기
+// 유저이름 submit 하고나서 입력창이 없어짐 - loginForm.classList.add("hidden");
+// 입력창이 없어지고 나면 h1 의 innerText가 출력됨
+function onLoginSubmit(cake) {
+    cake.preventDefault();
+    const username = loginInput.value;
+    loginForm.classList.add("hidden");
+    // 4.5 local Storage 에 입력받은 유저네임 저장
+    localStorage.setItem(USERNAME_KEY, username);
+    //4.4 greeting에 innerText 추가 - greeting은 h1을 가리킴
+    // greeting.innerText 는 h1에 들어감
+    // 백틱 기호로 문자열 안에 변수 넣기
+    paintGreetings()
+}
+
+// 4.5
+function paintGreetings() {
+    const username = localStorage.getItem(USERNAME_KEY);
+    greeting.classList.remove("hidden");
+    greeting.innerText = `Hello, ${username}`;
+}
+
+// 4.5
+// local storage 에 유저이름이 있는지 유무확인
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (savedUsername === null) {
+    // show the form
+    // form, h1 모두 숨긴 상태에서 시작 - html form 태그 hidden 추가
+    loginForm.classList.remove("hidden");
+    loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+    // show the greetings
+    paintGreetings()
+}
+// 4.3
+// 링크를 클릭하면 연결된 페이지로 이동 - 클릭 감지
+// function handleLinkClick(cake) {
+//     cake.preventDefault();
+//     console.dir(cake);
+// }
+// link.addEventListener("click", handleLinkClick)
